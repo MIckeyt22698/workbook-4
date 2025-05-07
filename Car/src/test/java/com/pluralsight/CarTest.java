@@ -2,20 +2,21 @@ package com.pluralsight;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class CarTest {
 
     @Test
-    void accelerate_should_increaseCarSpeed() {
-        //arrange
+    void accelerate() {
+//arrange
         Car car = new Car("yamaha", "R6");
         int spedChange = 15;
         int expectedSpeed = 15;
 
-        //act
+//act
         car.accelerate(spedChange);
 
-        //assert
+//assert
         assertEquals(expectedSpeed, car.getSpeed());
 
     }
