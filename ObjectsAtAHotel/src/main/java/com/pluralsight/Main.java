@@ -47,21 +47,21 @@ public class Main {
 //        System.out.println("Available: " + room101.isAvailable());
 //
 //
-//        Employee e = new Employee("1iy45fx", "Mickley Teke", "Kitchen", 20.0, 0);
-//        e.punchTimeCard(9.0);
-//        e.punchTimeCard(17.0);
+        Employee e = new Employee("1iy45fx", "Mickley Teke", "Kitchen", 20.0, 0);
+        e.punchTimeCard(9.0);
+        e.punchTimeCard(17.0);
 
 
-        Hotel defaultHotel = new Hotel("Sunrise Inn", 5, 10);
-        Hotel initializedHotel = new Hotel("Lakeside Resort", 3, 6, 1, 2);
-
-        System.out.println("Default Hotel - Suites Available: " + defaultHotel.getAvailableSuites());
-        defaultHotel.bookRoom(true); // Book 1 suite
-        System.out.println("Default Hotel - Suites Available after booking: " + defaultHotel.getAvailableSuites());
-
-        System.out.println("Initialized Hotel - Basic Rooms Available: " + initializedHotel.getAvailableRooms());
-        initializedHotel.bookRoom(2, false); // Try booking 2 more basic rooms
-        System.out.println("Initialized Hotel - Basic Rooms Available after booking: " + initializedHotel.getAvailableRooms());
+//        Hotel defaultHotel = new Hotel("Sunrise Inn", 5, 10);
+//        Hotel initializedHotel = new Hotel("Lakeside Resort", 3, 6, 1, 2);
+//
+//        System.out.println("Default Hotel - Suites Available: " + defaultHotel.getAvailableSuites());
+//        defaultHotel.bookRoom(true); // Book 1 suite
+//        System.out.println("Default Hotel - Suites Available after booking: " + defaultHotel.getAvailableSuites());
+//
+//        System.out.println("Initialized Hotel - Basic Rooms Available: " + initializedHotel.getAvailableRooms());
+//        initializedHotel.bookRoom(2, false); // Try booking 2 more basic rooms
+//        System.out.println("Initialized Hotel - Basic Rooms Available after booking: " + initializedHotel.getAvailableRooms());
     }
 }
 

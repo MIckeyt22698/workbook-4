@@ -18,6 +18,7 @@ class RoomTest {
     }
     @Test
     public void testCheckIn_FailsIfOccupied() {
+        Room room = new Room(2, 100.0, true, true);
         room.checkIn(); // first check in
         room.checkIn(); // occupied should fail
         assertTrue(room.isOccupied(), "Room should still be occupied");
@@ -25,12 +26,14 @@ class RoomTest {
     }
     @Test
     public void testCheckIn_FailsIfDirty() {
+        Room room = new Room(2, 100.0, true, true);
         room.checkIn();     // now dirty
         room.checkOut();    // now empty and dirty should fail
         assertFalse(room.isOccupied(), "Room should not be re-occupied when dirty");
     }
     @Test
     public void testCheckOut_SetsOccupiedFalse_AndLeavesRoomDirty() {
+        Room room = new Room(2, 100.0, true, true);
         room.checkIn();
         room.checkOut();
         assertFalse(room.isOccupied(), "Room should not be occupied after checkout");
@@ -38,6 +41,7 @@ class RoomTest {
     }
     @Test
     public void testCleanRoom_SucceedsWhenNotOccupied() {
+        Room room = new Room(2, 100.0, true, true);
         room.checkIn();
         room.checkOut();   // empty and dirty
         room.cleanRoom();  // Should succeed
@@ -45,6 +49,7 @@ class RoomTest {
     }
     @Test
     public void testCleanRoom_FailsWhenOccupied() {
+        Room room = new Room(2, 100.0, true, true);
         room.checkIn();     //occupied and dirty
         room.cleanRoom();   // dont clean
         assertTrue(room.isDirty(), "Room should still be dirty if cleaning fails");
