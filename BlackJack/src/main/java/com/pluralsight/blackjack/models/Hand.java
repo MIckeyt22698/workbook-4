@@ -2,7 +2,7 @@ package com.pluralsight.blackjack.models;
 
 import java.util.ArrayList;
 
-public class Hand {
+public clasHand {
     private ArrayList<Card> cards;
 
     public Hand() {
