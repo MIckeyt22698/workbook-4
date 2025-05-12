@@ -32,16 +32,21 @@ public class Card {
     }
 
     public int getPointValue() {
-    // only return the value if the card is face up
-        if (isFaceUp) {
-    // determine point value and return it
-    // A = 11
-    // K, Q, J = 10
-    // all numeric cards are equal to their face value
-            return 11;
-        } else {
+        if (!isFaceUp) {
             return 0;
         }
+
+        return switch (value) {
+            case "A" -> 11;
+            case "K", "Q", "J" -> 10;
+            default -> {
+                try {
+                    yield Integer.parseInt(value); // for "2" to "10"
+                } catch (NumberFormatException e) {
+                    yield 0; // fallback in case of an unexpected value
+                }
+            }
+        };
     }
 
     public boolean isFaceUp() {

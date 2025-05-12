@@ -25,6 +25,7 @@ public class Deck {
 // deal the top card (if there are any cards left
         if(cards.size() > 0){
             Card card = cards.remove(0);
+            card.flip();
             return card;
         } else {
             return null;
